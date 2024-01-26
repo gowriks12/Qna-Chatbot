@@ -9,7 +9,7 @@ A generative AI web application that can answer questions by referring to custom
 This is a web application is using a FAISS as a vectorsotre and answers questions about multiple PDFs uploaded to it at the beginning if the session.
 
 
-![Logo](https://github.com/gowriks12/Qna-Chatbot/blob/develop/static/pdf-helper.gif)
+![Logo](https://github.com/gowriks12/Qna-Chatbot/blob/develop/static/pdf-helper-demo.gif)
 
 ## Environment Variables
 
