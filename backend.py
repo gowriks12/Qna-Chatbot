@@ -15,11 +15,6 @@ def get_chain(input_files):
     return chain
 
 
-def run_llm(query, chat_history):
-    chain = get_chain(["ML concept cheat sheet.pdf"])
-    response = chain({"question": query, "chat_history": chat_history})
-    return response
-
 
 if __name__ == "__main__":
     input_type = "PDF"

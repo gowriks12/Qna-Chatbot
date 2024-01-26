@@ -7,7 +7,7 @@ from langchain.chains import ConversationalRetrievalChain
 
 def get_conv_chain(vector_store):
     OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
-    # print(openai_api_key)
+
     llm_openai = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model_name="gpt-3.5-turbo", temperature=0)
 
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
