@@ -4,10 +4,9 @@ from langchain_community.chat_models import ChatOpenAI
 import os
 
 def search_agent(question):
-    # OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
-    OPENAI_API_KEY = "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"
-    # SERPER_API_KEY = os.environ["SERPER_API_KEY"]
-    os.environ["SERPER_API_KEY"] = "16fea078d8f16fb5094c0c61905d976ea8a72aed"
+    OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
+    SERPER_API_KEY = os.environ["SERPER_API_KEY"]
+
 
     llm = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model_name="gpt-3.5-turbo", temperature=0.1)
     search = GoogleSerperAPIWrapper()
