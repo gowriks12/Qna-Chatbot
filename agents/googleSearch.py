@@ -2,14 +2,14 @@ from langchain.agents import AgentType, Tool, initialize_agent
 from langchain_community.utilities import GoogleSerperAPIWrapper
 from langchain_community.chat_models import ChatOpenAI
 import os
+from dotenv import load_dotenv
+from loading_env_variables import init_env
 
 def search_agent(question):
-    OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
-    SERPER_API_KEY = os.environ["SERPER_API_KEY"]
-
-
-    llm = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model_name="gpt-3.5-turbo", temperature=0.1)
-    search = GoogleSerperAPIWrapper()
+    init_env()
+    load_dotenv()
+    llm = ChatOpenAI(openai_api_key=os.environ.get("OPENAI_API_KEY"), model_name="gpt-3.5-turbo", temperature=0.1)
+    search = GoogleSerperAPIWrapper(SERPER_API_KEY=os.environ["SERPER_API_KEY"])
     tools = [
         Tool(
             name="Intermediate Answer",
