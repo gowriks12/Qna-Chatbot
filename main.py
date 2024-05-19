@@ -18,8 +18,6 @@ if (
     st.session_state["user_prompt_history"] = []
     st.session_state["chat_history"] = []
     st.session_state.chain = None
-    st.session_state["search_question"] = []
-    st.session_state["search_answer"] = []
     st.session_state.search_button = False
     st.session_state.pdf_button = False
 
