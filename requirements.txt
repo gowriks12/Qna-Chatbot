@@ -2,6 +2,5 @@ streamlit
 streamlit_chat
 langchain-community
 langchain
-sentence-transformers
 pypdf2
 faiss-cpu
