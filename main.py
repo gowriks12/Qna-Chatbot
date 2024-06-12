@@ -47,7 +47,7 @@ if prompt:
         # generated_response = run_llm(
         #     query=prompt, chat_history=st.session_state["chat_history"]
         # )
-        generated_response = st.session_state.chain({"question": prompt, "chat_history": st.session_state["chat_history"]})
+        generated_response = st.session_state.chain({"question": prompt, "chat_history": st.session_state.chat_history})
         formatted_response = (
             f"{generated_response['answer']}"
         )

@@ -1,0 +1,13 @@
+sudo apt-get update
+git clone https://github.com/gowriks12/Qna-Chatbot.git
+sudo apt install python3-pip
+sudo apt install python3.12-venv
+python3 -m venv qnabot
+source qnabot/bin/activate
+cd QnaChatbot
+pip install -r requirements.txt
+echo OPENAI_API_KEY=api_key > .env
+#Temporary running
+python3 -m streamlit run main.py
+#Permanent running
+nohup python3 -m streamlit run main.py

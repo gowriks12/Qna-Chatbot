@@ -2,8 +2,11 @@ streamlit
 streamlit_chat
 langchain-community
 langchain
+langchain-core
 pypdf2
 faiss-cpu
 torch==2.2.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 sentence-transformers
+python-dotenv
+openai
 
